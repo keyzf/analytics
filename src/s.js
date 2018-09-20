@@ -38,6 +38,6 @@
     }
 
     let img = new Image(1, 1);
-    img.src = 'http://statistics.demo.com/s.gif?' + rq_args;
+    img.src = 'https://statistics.demo.com/s.gif?' + rq_args;
 
 })();
