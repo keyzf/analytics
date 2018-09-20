@@ -4,7 +4,7 @@ module.exports = {
     mode: 'development',
     entry: './src/main.js',
     output: {
-        filename: 'bundle.js',
+        filename: 'main.js',
         path: path.resolve(__dirname, 'dist')
     }
 };

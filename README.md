@@ -4,8 +4,6 @@
 
 采集内容:
 
-
-
 | 参数 | 获取方式 |
 | ------------ | ------------ |
 | 域名 | document.domain |
@@ -18,3 +16,12 @@
 | 浏览客户端 | navigator.userAgent |
 | 客户端语言 | navigator.language |
 
+## 使用
+
+直接在页面嵌入script
+
+```markdown
+    <script src="main.js"></script>
+```
+
+示例：dist/index.html
