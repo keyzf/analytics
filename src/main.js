@@ -70,7 +70,7 @@ statistics_server = 'https://statistics.demo.com/s.gif';
     // 若不存在用户标识，为新用户生成标识
     let mid = get_cookie('mid');
     if (mid == null) {
-        mid = js_uuid();
+        mid = js_uuid(15, 20);
         set_forever_cookie('mid', mid);
     }
     params.mid = mid;
