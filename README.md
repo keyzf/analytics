@@ -1,4 +1,4 @@
-# analytics
+# Analytics 
 
 轻量的前端统计框架
 
