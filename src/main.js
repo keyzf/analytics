@@ -1,4 +1,7 @@
-(function () {
+// 接受请求的
+statistics_server = 'https://statistics.demo.com/s.gif';
+
+(function (server) {
 
     let get_cookie = function (name) {
         let arr, val = null, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
@@ -6,6 +9,18 @@
             val = unescape(arr[2]);
         }
         return val;
+    };
+
+    let report = function (url, data) {
+        let rq_args = '';
+        for (let p in data) {
+            if (rq_args !== '') {
+                rq_args += '&';
+            }
+            rq_args += p + '=' + encodeURIComponent(data[p]);
+        }
+        let img = new Image(1, 1);
+        img.src = url + '?' + rq_args;
     };
 
     let params = {};
@@ -29,15 +44,7 @@
 
     params.mid = get_cookie('mid') || '';
 
-    let rq_args = '';
-    for (let p in params) {
-        if (rq_args !== '') {
-            rq_args += '&';
-        }
-        rq_args += p + '=' + encodeURIComponent(params[p]);
-    }
+    report(server, params);
 
-    let img = new Image(1, 1);
-    img.src = 'https://statistics.demo.com/s.gif?' + rq_args;
-
-})();
+})(statistics_server);
+// 立即执行
