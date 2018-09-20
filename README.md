@@ -1,4 +1,4 @@
-# statistics.js
+# analytics
 
 轻量的前端统计框架
 
@@ -16,12 +16,37 @@
 | 浏览客户端 | navigator.userAgent |
 | 客户端语言 | navigator.language |
 
-## 使用
+## 前端使用
 
 直接在页面嵌入script
 
 ```markdown
-    <script src="main.js"></script>
+<script>
+    // 接收日志服务
+    analytics_server = 'https://statistics.demo.com/s.gif';
+</script>
+<script src="main.js"></script>
 ```
 
-示例：dist/index.html
+示例文件：dist/index.html
+
+## 日志服务
+
+以`Nginx`为例
+
+```markdown
+location /s.gif {
+     # 设置图片格式，不缓存
+     default_type image/gif;
+     add_header Expires "Fri, 01 Jan 1980 00:00:00 GMT";
+     add_header Pragma "no-cache";
+     add_header Cache-Control "no-cache, max-age=0, must-revalidate";
+
+     # 返回空图片
+     empty_gif;
+}
+```
+
+## AccessLog 采集记录
+
+![screen](./screen.png)

@@ -1,5 +1,5 @@
-// 接受请求的
-statistics_server = 'https://statistics.demo.com/s.gif';
+
+analytics_server = analytics_server || 'https://statistics.demo.com/s.gif';
 
 (function (server) {
 
@@ -80,5 +80,5 @@ statistics_server = 'https://statistics.demo.com/s.gif';
 
     report(server, params);
 
-})(statistics_server);
+})(analytics_server);
 // 立即执行
