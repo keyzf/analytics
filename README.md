@@ -22,13 +22,12 @@
 
 ```markdown
 <script>
-    // 接收日志服务
     analytics_server = 'https://statistics.demo.com/s.gif';
 </script>
-<script src="main.js"></script>
+<script src="../dist/main.js"></script>
 ```
 
-示例文件：dist/index.html
+示例文件：example/index.html
 
 ## 日志服务
 
