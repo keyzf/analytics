@@ -49,4 +49,4 @@ location /s.gif {
 
 ## AccessLog 采集记录
 
-![screen](./screen.png)
+![screen](./p1.png)
