@@ -1,4 +1,3 @@
-
 analytics_server = analytics_server || 'https://statistics.demo.com/s.gif';
 
 (function (_server) {
@@ -54,6 +53,16 @@ analytics_server = analytics_server || 'https://statistics.demo.com/s.gif';
         params.url = document.URL || '';
         params.title = document.title || '';
         params.referrer = document.referrer || '';
+
+        let meta_keywords = document.querySelector('meta[name="keywords"]');
+        let meta_description = document.querySelector('meta[name="description"]');
+
+        if (meta_keywords) {
+            params.keywords = meta_keywords.getAttribute('content');
+        }
+        if (meta_description) {
+            params.description = meta_description.getAttribute('content');
+        }
     }
 
     if (window && window.screen) {
