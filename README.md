@@ -22,7 +22,10 @@
 
 ```markdown
 <script>
+    // 日志服务地址
     var analytics_server = 'https://statistics.demo.com/s.gif';
+    
+    // 初始化脚本
     (function () {
         var _analytics = document.createElement('script');
         _analytics.type = 'text/javascript';
