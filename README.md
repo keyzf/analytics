@@ -23,7 +23,7 @@
 ```markdown
 <script>
     // 日志服务地址
-    var analytics_server = 'https://statistics.demo.com/s.gif';
+    var analytics_server = 'http://47.106.188.204/s.gif';
     
     // 初始化脚本
     (function () {
