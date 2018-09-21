@@ -10,8 +10,7 @@
 | URL | document.URL |
 | 页面标题 | document.title |
 | 分辨率 | window.screen.height & width |
-| 颜色深度 | window.screen.height & width |
-| 分辨率 | window.screen.colorDepth |
+| 颜色深度 | window.screen.colorDepth |
 | Referrer | document.referrer |
 | 浏览客户端 | navigator.userAgent |
 | 客户端语言 | navigator.language |
