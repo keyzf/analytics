@@ -1,7 +1,7 @@
 
 analytics_server = analytics_server || 'https://statistics.demo.com/s.gif';
 
-(function (server) {
+(function (_server) {
 
     let set_forever_cookie = function (name, value) {
         document.cookie = name + "=" + value + ";expires=-1";
@@ -78,7 +78,7 @@ analytics_server = analytics_server || 'https://statistics.demo.com/s.gif';
     // 添加随机数，防止浏览器缓存
     params.t = Math.random();
 
-    report(server, params);
+    report(_server, params);
 
 })(analytics_server);
 // 立即执行
