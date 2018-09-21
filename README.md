@@ -22,9 +22,16 @@
 
 ```markdown
 <script>
-    analytics_server = 'https://statistics.demo.com/s.gif';
+    var analytics_server = 'https://statistics.demo.com/s.gif';
+    (function () {
+        var _analytics = document.createElement('script');
+        _analytics.type = 'text/javascript';
+        _analytics.async = true;
+        _analytics.src = 'http://47.106.188.204/analytics/dist/main.js';
+        var _script = document.getElementsByTagName('script')[0];
+        _script.parentNode.insertBefore(_analytics, _script);
+    })();
 </script>
-<script src="../dist/main.js"></script>
 ```
 
 示例文件：example/index.html
